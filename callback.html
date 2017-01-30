@@ -1,1 +1,27 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title> 
+     <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+</head>
+<body>
+    <script>
+   function getAuthCode(url){
+    var error = url.match(/[&\?]error=([^&]+)/);
+    if (error) {
+        throw 'Error getting authorization code: ' + error[1];
+    }
+    return url.match(/[&\?]code=([\w\/\-]+)/)[1];
+}
+
+
+ $(document).ready(function(){
+var authCode = getAuthCode(window.location.href);
+ })
+ 
+
+    </script>
+</body>
+</html>
