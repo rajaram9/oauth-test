@@ -19,6 +19,21 @@
 
  $(document).ready(function(){
 var authCode = getAuthCode(window.location.href);
+var reqObj={};
+reqObj.code=authCode;
+debugger;
+$.ajax({
+    url:'/callback/code',
+    method:'POST',
+    data:reqObj,
+    success:function(){
+
+    },
+    error:function(){
+
+    }
+})
+
  })
  
 
