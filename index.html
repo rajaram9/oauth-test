@@ -1,10 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
+    <script src="node_modules/jquery/dist/jquery.js"></script>
 </head>
+
 <body>
-    
+
+    <input type="button" class="login" value="login">
+
+
+
+    <script>
+        $(document).ready(function () {
+            $('.login').click(function () {
+                window.open('https://github.com/login/oauth/authorize?client_id=d968fe59ccb6ad496279');
+            })
+        })
+    </script>
+
 </body>
+
 </html>
